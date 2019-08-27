@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14865.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14819.2"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iOSMouseKid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hT2-Ig-U3f" customClass="ControllerView" customModule="iOSMouseKid" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="375" height="694"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uwp-iZ-oph" customClass="MouseButton" customModule="iOSMouseKid" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="187.66666666666666" height="694"/>
+                                <connections>
+                                    <action selector="btnTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="iTr-sa-9Av"/>
+                                    <action selector="btnTouchUp:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="5MM-aP-E3G"/>
+                                    <action selector="btnTouchUp:" destination="BYZ-38-t0r" eventType="touchCancel" id="k4g-uh-MaU"/>
+                                    <action selector="btnTouchUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r1j-Eu-4sn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yjN-7H-CX5" customClass="MouseButton" customModule="iOSMouseKid" customModuleProvider="target">
+                                <rect key="frame" x="187.66666666666663" y="44" width="187.33333333333337" height="694"/>
+                                <connections>
+                                    <action selector="btnTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="gm1-gA-uMR"/>
+                                    <action selector="btnTouchUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CEN-65-uHk"/>
+                                    <action selector="btnTouchUp:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="dSE-gT-GO7"/>
+                                    <action selector="btnTouchUp:" destination="BYZ-38-t0r" eventType="touchCancel" id="qOS-hm-dhD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfl-EX-1wW">
+                                <rect key="frame" x="0.0" y="738" width="375" height="40"/>
+                                <color key="backgroundColor" red="0.35686274509999999" green="0.36078431370000003" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="l65-tO-YAg"/>
+                                </constraints>
+                                <state key="normal" title="Sync">
+                                    <color key="titleColor" red="0.0" green="0.90196078430000004" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="sync:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1K8-eo-CWk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98431372549019602" green="0.75294117647058822" blue="0.1764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="uwp-iZ-oph" firstAttribute="width" secondItem="cfl-EX-1wW" secondAttribute="width" multiplier="1:2" id="29F-7T-DyT"/>
+                            <constraint firstItem="hT2-Ig-U3f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3FT-ff-CR3"/>
+                            <constraint firstItem="cfl-EX-1wW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4y2-DC-LeH"/>
+                            <constraint firstItem="hT2-Ig-U3f" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Fgi-g1-Jxe"/>
+                            <constraint firstItem="cfl-EX-1wW" firstAttribute="top" secondItem="yjN-7H-CX5" secondAttribute="bottom" id="PZH-Qe-Zh7"/>
+                            <constraint firstItem="yjN-7H-CX5" firstAttribute="leading" secondItem="uwp-iZ-oph" secondAttribute="trailing" id="b8x-ia-EAY"/>
+                            <constraint firstItem="cfl-EX-1wW" firstAttribute="top" secondItem="uwp-iZ-oph" secondAttribute="bottom" id="eoD-OD-CYZ"/>
+                            <constraint firstItem="yjN-7H-CX5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fFN-FZ-6b8"/>
+                            <constraint firstItem="hT2-Ig-U3f" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hXl-7J-dXh"/>
+                            <constraint firstItem="cfl-EX-1wW" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="jBB-NA-d8O"/>
+                            <constraint firstItem="cfl-EX-1wW" firstAttribute="top" secondItem="hT2-Ig-U3f" secondAttribute="bottom" id="kQg-oX-K7a"/>
+                            <constraint firstItem="uwp-iZ-oph" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nYT-9T-ntv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cfl-EX-1wW" secondAttribute="trailing" id="nxK-tJ-eUm"/>
+                            <constraint firstItem="uwp-iZ-oph" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="uZ3-tN-GhT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yjN-7H-CX5" secondAttribute="trailing" id="xLX-21-CiL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="controllerView" destination="hT2-Ig-U3f" id="PM1-gh-may"/>
+                        <outlet property="syncBtn" destination="cfl-EX-1wW" id="mCd-62-f8M"/>
+                        <outletCollection property="buttons" destination="yjN-7H-CX5" collectionClass="NSMutableArray" id="z22-DE-336"/>
+                        <outletCollection property="buttons" destination="uwp-iZ-oph" collectionClass="NSMutableArray" id="cf8-Mz-lDn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="138.91625615763547"/>
+        </scene>
+    </scenes>
+</document>
